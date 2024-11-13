@@ -1,14 +1,25 @@
 {
-  "name": "react-storybook",
-  "private": true,
-  "version": "0.0.0",
+  "name": "react-storybook-template",
+  "description": "react storybook template",
   "type": "module",
+  "files": ["dist"],
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "homepage": "https://github.com/ianzone/react-storybook#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianzone/react-storybook.git"
+  },
   "scripts": {
+    "lint": "biome check --fix src --reporter summary",
     "build": "tsc && vite build",
     "dev": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "postinstall": "lefthook install",
+    "commit": "git add -A && git-cz",
+    "release": "semantic-release -d"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -26,12 +37,17 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react-swc": "^3.7.1",
+    "biome": "^0.3.3",
+    "git-cz": "^4.9.0",
+    "lefthook": "^1.8.2",
+    "semantic-release": "^24.2.0",
     "storybook": "^8.4.2",
     "typescript": "^5.6.3",
-    "vite": "^5.4.10"
+    "vite": "^5.4.11",
+    "vite-plugin-dts": "^4.3.0",
+    "vite-plugin-lib-inject-css": "^2.1.1"
   },
   "engines": {
-    "node": ">=22",
-    "pnpm": ">=9"
+    "node": ">=22"
   }
 }
