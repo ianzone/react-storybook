@@ -11,6 +11,11 @@ export default defineConfig({
     libInjectCss(),
     dts({ rollupTypes: true, tsconfigPath: './tsconfig.app.json' }),
   ],
+  resolve: {
+    alias: {
+      src: resolve(__dirname, 'src'),
+    },
+  },
   build: {
     lib: {
       // https://vite.dev/config/build-options.html#build-lib
