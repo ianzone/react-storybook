@@ -28,6 +28,9 @@
     <td>Testing</td>
     <td>
       <a href="https://storybook.js.org/docs"><img src='https://img.shields.io/badge/Storybook-FF4785?logo=storybook&labelColor=grey'></a>
+      <a href="https://cn.vitest.dev/guide/"><img src='https://img.shields.io/badge/Vitest-729b1b?logo=Vitest&labelColor=grey'></a>
+      <a href="https://testing-library.com/docs/react-testing-library/intro/"><img src='https://img.shields.io/badge/Testing_Library-E33332?logo=testinglibrary&labelColor=grey'></a>
+      <a href="https://fakerjs.dev/api/"><img src='https://img.shields.io/badge/Mock-Faker-blue'></a>
     </td>
     <td>
     </td>
@@ -44,3 +47,23 @@
 </table>
 
 [Publish storybook](https://storybook.js.org/docs/sharing/publish-storybook)
+
+# Build strategy
+## Products
+- .js
+- .d.ts
+- .map
+- .css
+
+## bundle dependencies?
+### Pros
+- Smaller download size when importing from html `<script>` tag via CDN.
+### Cons
+- Unnecessary build process, library would be bundled by the final user.
+- Can not share project dependencies, which cause redundant code and cause different globals for the same dependency.
+
+## tsc caveats
+[Path alias doesn't work in .d.ts files.](https://github.com/microsoft/TypeScript/issues/15479)
+check https://github.com/microsoft/TypeScript/issues/16607
+[css won't be copied to dist](https://stackoverflow.com/questions/59213489/include-css-files-in-tsc-typescript-compilation)
+### TODO: include css
