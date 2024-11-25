@@ -6,7 +6,7 @@
   "files": ["dist"],
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "style": "./dist/index.css",
+  "style": "./dist/style.css",
   "homepage": "https://github.com/ianzone/react-storybook#readme",
   "repository": {
     "type": "git",
@@ -14,7 +14,7 @@
   },
   "scripts": {
     "lint": "biome check --fix src --reporter summary",
-    "build": "tsc --project tsconfig.build.json",
+    "build": "vite build",
     "dev": "storybook dev -p 6006",
     "dev:cc": "rm ./node_modules/.cache -r && nr dev",
     "build-storybook": "storybook build",
@@ -22,6 +22,7 @@
     "commit": "git add -A && git-cz",
     "release": "semantic-release -d"
   },
+  "dependencies": {},
   "peerDependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -48,6 +49,7 @@
     "storybook": "^8.4.5",
     "typescript": "^5.7.2",
     "vite": "^5.4.11",
+    "vite-plugin-dts": "^4.3.0",
     "vitest": "^2.1.5"
   },
   "engines": {
