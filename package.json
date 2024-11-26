@@ -48,9 +48,9 @@
     "semantic-release": "^24.2.0",
     "storybook": "^8.4.5",
     "typescript": "^5.7.2",
-    "vite": "^5.4.11",
+    "vite": "^6.0.0",
     "vite-plugin-dts": "^4.3.0",
-    "vitest": "^2.1.5"
+    "vitest": "^2.1.6"
   },
   "engines": {
     "node": ">=22"

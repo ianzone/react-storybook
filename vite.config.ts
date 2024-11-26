@@ -24,6 +24,7 @@ export default defineConfig({
       // https://vite.dev/config/build-options.html#build-lib
       entry: resolve(__dirname, 'src/index.ts'),
       fileName: 'index',
+      cssFileName: 'style',
       formats: ['es'],
     },
     rollupOptions: {
