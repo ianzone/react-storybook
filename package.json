@@ -41,6 +41,7 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react-swc": "^3.7.2",
+    "biome-extends": "^1.0.1",
     "git-cz": "^4.9.0",
     "happy-dom": "^15.11.7",
     "lefthook": "^1.8.4",
