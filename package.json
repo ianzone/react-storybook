@@ -15,7 +15,7 @@
   "scripts": {
     "lint": "biome check --fix src",
     "build": "vite build",
-    "build:storybook": "storybook build",
+    "build:storybook": "storybook build --output-dir storybook",
     "dev": "storybook dev -p 6006",
     "dev:cc": "rm ./node_modules/.cache -r && nr dev",
     "postinstall": "lefthook install",
@@ -45,7 +45,7 @@
     "biome-extends": "^1.0.1",
     "git-cz": "^4.9.0",
     "happy-dom": "^15.11.7",
-    "lefthook": "^1.8.5",
+    "lefthook": "^1.9.0",
     "semantic-release": "^24.2.0",
     "storybook": "^8.4.7",
     "typescript": "^5.7.2",

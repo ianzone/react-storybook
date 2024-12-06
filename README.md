@@ -49,13 +49,13 @@
 [Publish storybook](https://storybook.js.org/docs/sharing/publish-storybook)
 
 # Build strategy
-## Products
+## Produce
 - .js
 - .d.ts
 - .map
 - .css
 
-## bundle dependencies?
+## Bundle dependencies?
 ### Pros
 - Smaller download size when importing from html `<script>` tag via CDN.
 ### Cons
