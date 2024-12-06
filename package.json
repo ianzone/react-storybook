@@ -13,44 +13,45 @@
     "url": "git+https://github.com/ianzone/react-storybook.git"
   },
   "scripts": {
-    "lint": "biome check --fix src --reporter summary",
+    "lint": "biome check --fix src",
     "build": "vite build",
+    "build:storybook": "storybook build",
     "dev": "storybook dev -p 6006",
     "dev:cc": "rm ./node_modules/.cache -r && nr dev",
-    "build-storybook": "storybook build",
     "postinstall": "lefthook install",
     "commit": "git add -A && git-cz",
-    "release": "semantic-release -d"
+    "release": "semantic-release -d",
+    "update": "nlx storybook@latest upgrade"
   },
   "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@chromatic-com/storybook": "^3.2.2",
-    "@storybook/addon-essentials": "^8.4.6",
-    "@storybook/addon-interactions": "^8.4.6",
-    "@storybook/addon-links": "^8.4.6",
-    "@storybook/addon-onboarding": "^8.4.6",
-    "@storybook/blocks": "^8.4.6",
-    "@storybook/builder-vite": "^8.4.6",
-    "@storybook/react": "^8.4.6",
-    "@storybook/react-vite": "^8.4.6",
-    "@storybook/test": "^8.4.6",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-interactions": "^8.4.7",
+    "@storybook/addon-links": "^8.4.7",
+    "@storybook/addon-onboarding": "^8.4.7",
+    "@storybook/blocks": "^8.4.7",
+    "@storybook/builder-vite": "^8.4.7",
+    "@storybook/react": "^8.4.7",
+    "@storybook/react-vite": "^8.4.7",
+    "@storybook/test": "^8.4.7",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react-swc": "^3.7.2",
     "biome-extends": "^1.0.1",
     "git-cz": "^4.9.0",
     "happy-dom": "^15.11.7",
-    "lefthook": "^1.8.4",
+    "lefthook": "^1.8.5",
     "semantic-release": "^24.2.0",
-    "storybook": "^8.4.6",
+    "storybook": "^8.4.7",
     "typescript": "^5.7.2",
-    "vite": "^6.0.1",
+    "vite": "^6.0.3",
     "vite-plugin-dts": "^4.3.0",
-    "vitest": "^2.1.6"
+    "vitest": "^2.1.8"
   },
   "engines": {
     "node": ">=22"
