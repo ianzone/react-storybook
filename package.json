@@ -22,7 +22,8 @@
     "postinstall": "lefthook install",
     "commit": "git add -A && git-cz",
     "release": "semantic-release -d",
-    "update": "nlx storybook@latest upgrade"
+    "update": "nlx storybook@latest upgrade",
+    "chromatic": "chromatic --exit-zero-on-changes"
   },
   "peerDependencies": {
     "react": "^19.0.0",
@@ -31,6 +32,7 @@
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@chromatic-com/storybook": "^3.2.3",
+    "@storybook/addon-a11y": "^8.4.7",
     "@storybook/addon-essentials": "^8.4.7",
     "@storybook/addon-interactions": "^8.4.7",
     "@storybook/addon-links": "^8.4.7",
