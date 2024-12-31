@@ -20,7 +20,7 @@ const meta: Meta<typeof Header> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Header>;
 
 export const LoggedIn: Story = {
   args: {
