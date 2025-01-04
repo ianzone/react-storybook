@@ -4,7 +4,7 @@ import type { GlobalConfig } from 'semantic-release';
 const config: GlobalConfig = {
   repositoryUrl: 'https://github.com/ianzone/react-storybook',
   tagFormat: 'v${version}',
-  branches: ['main'],
+  branches: ['release'],
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
