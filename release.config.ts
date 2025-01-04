@@ -1,7 +1,9 @@
-import type { Options } from 'semantic-release';
+import type { GlobalConfig } from 'semantic-release';
 
 // https://semantic-release.gitbook.io/semantic-release/usage/configuration
-const config: Options = {
+const config: GlobalConfig = {
+  repositoryUrl: 'https://github.com/ianzone/react-storybook',
+  tagFormat: 'v${version}',
   branches: ['main'],
   plugins: [
     '@semantic-release/commit-analyzer',
