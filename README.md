@@ -32,7 +32,7 @@
     </td>
     <td>
     <a href="https://testing-library.com/docs/react-testing-library/intro/"><img src='https://img.shields.io/badge/Testing_Library-E33332?logo=testinglibrary&labelColor=grey'></a>
-      <a href="https://fakerjs.dev/api/"><img src='https://img.shields.io/badge/Mock-Faker-blue'></a>
+      <a href="https://fakerjs.dev/api/"><img src='https://img.shields.io/badge/🪄-Faker-firebrick'></a>
     </td>
   </tr>
   <tr>
