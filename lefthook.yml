@@ -43,6 +43,26 @@ prepare-commit-msg:
         LEFTHOOK: "0"
 
 post-merge:
+  follow: true
   commands:
-    packages:
-      run: git diff --quiet HEAD@{$(echo 1)} -- bun.lock || ni
+    check-lock:
+      run: |
+        LOCK_FILE=bun.lock
+        PRE=1
+        if git diff --quiet HEAD@{$PRE} -- $LOCK_FILE; then
+          echo $LOCK_FILE changed, updating dependencies ...
+          ni
+        fi
+
+post-checkout:
+  follow: true
+  commands:
+    check-lock:
+      run: |
+        LOCK_FILE=bun.lock
+        if [ {3} -eq 1 ]; then
+          if git diff --quiet {1} {2} -- $LOCK_FILE; then
+          echo $LOCK_FILE changed, updating dependencies ...
+            ni
+          fi
+        fi
