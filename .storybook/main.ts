@@ -1,5 +1,4 @@
-import type { StorybookConfig } from '@storybook/react-vite';
-import { mergeConfig } from 'vite';
+import type { StorybookConfig } from 'storybook-react-rsbuild';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -12,19 +11,12 @@ const config: StorybookConfig = {
     '@storybook/addon-interactions',
     '@storybook/addon-a11y',
     '@storybook/addon-coverage',
+    'storybook-addon-rslib',
   ],
 
   framework: {
-    name: '@storybook/react-vite',
+    name: 'storybook-react-rsbuild',
     options: {},
-  },
-
-  async viteFinal(config) {
-    return mergeConfig(config, {
-      build: {
-        minify: false, // NOTE: This is necessary for storybook to display the correct source code
-      },
-    });
   },
 
   docs: {},
