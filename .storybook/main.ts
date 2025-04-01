@@ -10,8 +10,19 @@ const config: StorybookConfig = {
     '@chromatic-com/storybook',
     '@storybook/addon-interactions',
     '@storybook/addon-a11y',
-    '@storybook/addon-coverage',
     'storybook-addon-rslib',
+  ],
+
+  webpackAddons: [
+    {
+      name: '@storybook/addon-coverage',
+      options: {
+        istanbul: {
+          include: ['src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
+          exclude: [],
+        },
+      },
+    },
   ],
 
   framework: {

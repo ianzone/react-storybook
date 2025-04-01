@@ -12,7 +12,7 @@
     <td>Building</td>
     <td>
       <a href="https://www.typescriptlang.org/"><img src='https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&labelColor=grey'></a>
-      <a href="https://lib.rsbuild.dev/zh/"><img src='https://img.shields.io/badge/build-Rslib-f28974?labelColor=grey'></a>
+      <a href="https://lib.rsbuild.dev/zh/"><img src='https://img.shields.io/badge/Rslib-f28974?labelColor=grey&logo=rust'></a>
     </td>
     <td>
     </td>
@@ -62,4 +62,4 @@ Since package managers will download dependencies of dependencies, it's not nece
 [Path alias doesn't work in .d.ts files.](https://github.com/microsoft/TypeScript/issues/15479)
 check https://github.com/microsoft/TypeScript/issues/16607
 [css won't be copied to dist](https://stackoverflow.com/questions/59213489/include-css-files-in-tsc-typescript-compilation)
-solution: vite-plugin-dts
+solution: use bundler to generate .d.ts files

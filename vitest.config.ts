@@ -6,8 +6,8 @@ export default defineConfig({
     environment: 'happy-dom',
     include: ['src/**/*.{test,spec}.?(c|m)[jt]s?(x)'],
     coverage: {
+      provider: 'istanbul', // https://github.com/jestjs/jest/issues/11188
       include: ['src/**/*.ts'],
-      exclude: ['**/index.ts', '**/*.d.ts'],
     },
   },
 });
