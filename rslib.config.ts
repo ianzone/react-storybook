@@ -1,22 +1,3 @@
-import { pluginReact } from '@rsbuild/plugin-react';
-import { defineConfig } from '@rslib/core';
+import { rslibConfig } from '@es-proj/story-react';
 
-export default defineConfig({
-  source: {
-    entry: {
-      index: ['src/**', '!src/**/*.{test,spec,stories}.*', '!src/**/*.mdx'],
-    },
-  },
-  lib: [
-    {
-      bundle: false,
-      dts: true,
-      format: 'esm',
-    },
-  ],
-  output: {
-    target: 'web',
-    sourceMap: true,
-  },
-  plugins: [pluginReact()],
-});
+export default rslibConfig;
