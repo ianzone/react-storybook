@@ -1,3 +1,3 @@
-import { mainConfig } from '@es-proj/story-react';
+import { mainConfig } from '@es-proj/story-react-rsbuild';
 
 export default mainConfig;

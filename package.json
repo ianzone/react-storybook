@@ -29,16 +29,13 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@es-proj/story-react": "^1.0.10",
+    "@es-proj/story-react-rsbuild": "^1.0.2",
     "@semantic-release/exec": "^7.0.3",
     "concurrently": "^9.1.2",
     "git-cz": "^4.9.0",
     "knip": "^5.50.2",
     "lefthook": "^1.11.9",
     "wait-on": "^8.0.3"
-  },
-  "overrides": {
-    "estree-walker": "2.0.2"
   },
   "trustedDependencies": ["@biomejs/biome", "lefthook"]
 }

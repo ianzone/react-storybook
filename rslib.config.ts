@@ -1,3 +1,3 @@
-import { rslibConfig } from '@es-proj/story-react';
+import { rslibConfig } from '@es-proj/story-react-rsbuild';
 
 export default rslibConfig;
