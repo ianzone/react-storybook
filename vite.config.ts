@@ -8,8 +8,7 @@ import react from '@vitejs/plugin-react';
 import { playwright } from '@vitest/browser-playwright';
 import { defineConfig } from 'vite';
 
-const dirname =
-  typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url));
+const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url));
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
@@ -46,22 +45,29 @@ export default defineConfig({
     sourcemap: true,
     lib: {
       entry: ['src/index.ts'],
-      name: 'MyLib',
-      formats: ['es', 'iife'],
       cssFileName: 'index',
     },
     rollupOptions: {
-      // 确保外部化处理那些
-      // 你不想打包进库的依赖
       external: ['react', 'react-dom'],
-      output: {
-        // 在 UMD 构建模式下为这些外部化的依赖
-        // 提供一个全局变量
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
+      output: [
+        {
+          format: 'es',
+          preserveModules: true,
+          preserveModulesRoot: 'src',
+          entryFileNames: '[name].js',
         },
-      },
+        {
+          format: 'iife',
+          dir: 'dist',
+          name: 'MyReactLib',
+          entryFileNames: 'index.iife.js',
+          extend: true,
+          globals: {
+            react: 'React',
+            'react-dom': 'ReactDOM',
+          },
+        },
+      ],
     },
   },
 });

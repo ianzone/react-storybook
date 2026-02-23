@@ -12,7 +12,7 @@
     <td>Building</td>
     <td>
       <a href="https://www.typescriptlang.org/"><img src='https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&labelColor=grey'></a>
-      <a href="https://lib.rsbuild.dev/zh/"><img src='https://img.shields.io/badge/Rslib-f28974?labelColor=grey&logo=rust'></a>
+      <a href="https://cn.vitejs.dev/"><img src='https://img.shields.io/badge/Vite-646CFF?logo=Vite&labelColor=grey'></a>
     </td>
     <td>
     </td>

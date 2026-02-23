@@ -8,12 +8,12 @@
   ],
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "style": "./dist/style.css",
+  "style": "./dist/index.css",
   "homepage": "https://github.com/ianzone/react-storybook#readme",
   "scripts": {
     "dev": "storybook dev -p 6006",
     "dev:cc": "storybook dev -p 6006 --force-build-preview",
-    "build": "vite build",
+    "build": "vite build -c vite.build.ts && tsc -p ./tsconfig.app.json",
     "build:story": "storybook build --docs --output-dir storybook",
     "test": "nr test:ts && nr test:tsx",
     "test:ts": "vitest run --coverage",
@@ -33,6 +33,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.4.4",
     "@chromatic-com/storybook": "^5.0.1",
+    "@es-proj/utils": "^1.6.7",
     "@semantic-release/exec": "^7.1.0",
     "@storybook/addon-a11y": "^10.2.10",
     "@storybook/addon-docs": "^10.2.10",
