@@ -1,5 +1,3 @@
-/// <reference types="vitest/config" />
-
 // https://vite.dev/config/
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -48,7 +46,10 @@ export default defineConfig({
       cssFileName: 'index',
     },
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: (id) => {
+        // 匹配 'react', 'react/jsx-runtime', 'react-dom' 等
+        return /^react(-dom)?(\/.*)?$/.test(id);
+      },
       output: [
         {
           format: 'es',
@@ -65,6 +66,7 @@ export default defineConfig({
           globals: {
             react: 'React',
             'react-dom': 'ReactDOM',
+            'react/jsx-runtime': 'jsxRuntime',
           },
         },
       ],
