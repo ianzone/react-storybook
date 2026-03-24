@@ -1,6 +1,7 @@
 import path from 'node:path';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
+import pkg from './package.json';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -12,17 +13,21 @@ export default defineConfig({
   },
   build: {
     sourcemap: true,
+    emptyOutDir: false,
     lib: {
       entry: 'src/index.ts',
-      cssFileName: 'index',
-      formats: ['es'],
+      formats: ['iife'],
+      name: 'AntdEnhanced',
+      fileName: 'index',
     },
     rolldownOptions: {
-      external: /node_modules/,
+      external: [...Object.keys(pkg.peerDependencies), 'react/jsx-runtime'],
       output: {
-        preserveModules: true,
-        preserveModulesRoot: 'src',
-        entryFileNames: '[name].js',
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+          'react/jsx-runtime': 'jsxRuntime',
+        },
       },
     },
   },
