@@ -51,15 +51,7 @@
 # Build strategy
 ## Produce
 - .js
+- .iife.js
 - .d.ts
 - .map
 - .css
-
-## Bundle dependencies?
-Since package managers will download dependencies of dependencies, it's not necessary to bundle them. However, it's good to bundle if the lib is delivered via CDN.
-
-## tsc caveats
-[Path alias doesn't work in .d.ts files.](https://github.com/microsoft/TypeScript/issues/15479)
-check https://github.com/microsoft/TypeScript/issues/16607
-[css won't be copied to dist](https://stackoverflow.com/questions/59213489/include-css-files-in-tsc-typescript-compilation)
-solution: use bundler to generate .d.ts files
