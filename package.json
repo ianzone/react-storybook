@@ -6,8 +6,16 @@
   "files": [
     "dist"
   ],
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js"
+    }
+  },
   "style": "./dist/style.css",
   "homepage": "https://github.com/ianzone/react-storybook#readme",
   "scripts": {
@@ -23,7 +31,6 @@
     "prepare": "lefthook install",
     "commit": "git add -A && git commit --no-edit",
     "squash": "bun scripts/squash.ts && git commit --no-edit --no-verify",
-    "release": "semantic-release -d",
     "chromatic": "chromatic --exit-zero-on-changes"
   },
   "peerDependencies": {
@@ -34,7 +41,6 @@
     "@biomejs/biome": "^2.4.10",
     "@chromatic-com/storybook": "^5.1.1",
     "@es-proj/utils": "^1.6.10",
-    "@semantic-release/exec": "^7.1.0",
     "@storybook/addon-a11y": "^10.3.5",
     "@storybook/addon-docs": "^10.3.5",
     "@storybook/addon-vitest": "^10.3.5",

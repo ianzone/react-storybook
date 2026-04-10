@@ -5,10 +5,6 @@ export default defineConfig({
   entry: ['./src/index.ts'],
   platform: 'browser',
   sourcemap: true,
-  dts: true,
-  deps: {
-    neverBundle: [...Object.keys(pkg.peerDependencies || {}), 'react/jsx-runtime'],
-  },
   format: {
     iife: {
       globalName: 'MyLibrary',
@@ -16,6 +12,10 @@ export default defineConfig({
       css: {
         minify: true,
       },
+      // deps: {
+      //   skipNodeModulesBundle: false,
+      //   alwaysBundle: (id) => Object.hasOwn(pkg.dependencies, id),
+      // },
       outputOptions: {
         globals: {
           react: 'React',
