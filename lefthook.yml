@@ -20,9 +20,6 @@ pre-commit:
           - name: vitest
             glob: '*.{ts,tsx,js,jsx}'
             run: na vitest related --run {staged_files}
-          - name: storybook
-            glob: '*.{tsx,jsx}'
-            run: echo 'nr test:tsx'
           # SECTION - Audit
           - name: gitleaks
             run: gitleaks protect --staged --no-banner
