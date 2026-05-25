@@ -13,6 +13,7 @@
     <td>
       <a href="https://www.typescriptlang.org/"><img src='https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&labelColor=grey'></a>
       <a href="https://cn.vitejs.dev/"><img src='https://img.shields.io/badge/Vite-646CFF?logo=Vite&labelColor=grey'></a>
+      <a href="https://tsdown.dev/zh-CN/guide/"><img src='https://img.shields.io/badge/tsdown-FF4100?logo=rolldown&labelColor=grey'></a>
     </td>
     <td>
     </td>
@@ -29,7 +30,7 @@
     <td>
       <a href="https://storybook.js.org/docs"><img src='https://img.shields.io/badge/Storybook-FF4785?logo=storybook&labelColor=grey'></a>
       <a href="https://cn.vitest.dev/guide/"><img src='https://img.shields.io/badge/Vitest-729b1b?logo=Vitest&labelColor=grey'></a>
-      <a href="https://testing-library.com/docs/react-testing-library/intro/"><img src='https://img.shields.io/badge/Testing_Library-E33332?logo=testinglibrary&labelColor=grey'></a>
+      <a href="https://playwright.dev/docs/intro"><img src='https://img.shields.io/badge/🎭-Playwright-2EAD33?labelColor=grey'></a>
     </td>
     <td>
       <a href="https://fakerjs.dev/api/"><img src='https://img.shields.io/badge/🪄-Faker-firebrick'></a>
@@ -40,6 +41,7 @@
     <td>
       <a href="https://github.com/evilmartians/lefthook/"><img src='https://img.shields.io/badge/Lefthook-FF1E1E?labelColor=grey&logo=lefthook'></a>
       <a href="https://semantic-release.gitbook.io/semantic-release"><img src='https://img.shields.io/badge/semantic-e10079?logo=semantic-release&labelColor=grey'></a>
+      <a href="https://www.chromatic.com/docs/"><img src='https://img.shields.io/badge/Chromatic-FC521F?logo=chromatic&labelColor=grey'></a>
     </td>
     <td>
     </td>
