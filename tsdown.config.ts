@@ -1,9 +1,11 @@
+import react from '@vitejs/plugin-react';
 import { defineConfig } from 'tsdown';
 import pkg from './package.json' with { type: 'json' };
 
 export default defineConfig({
   entry: ['./src/index.ts'],
   platform: 'browser',
+  plugins: [react({ compiler: true })],
   sourcemap: true,
   format: {
     iife: {
@@ -21,6 +23,7 @@ export default defineConfig({
           react: 'React',
           'react-dom': 'ReactDOM',
           'react/jsx-runtime': 'jsxRuntime',
+          'react/compiler-runtime': 'ReactCompilerRuntime',
         },
       },
     },

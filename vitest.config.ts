@@ -7,7 +7,7 @@ import { defineConfig } from 'vitest/config';
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 // https://cn.vitest.dev/guide/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react({ compiler: true })],
   resolve: {
     alias: {
       src: path.resolve(__dirname, './src'),
