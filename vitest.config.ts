@@ -10,7 +10,7 @@ export default defineConfig({
   plugins: [react({ compiler: true })],
   resolve: {
     alias: {
-      src: path.resolve(__dirname, './src'),
+      src: path.resolve(import.meta.dirname, './src'),
     },
   },
   test: {
@@ -30,7 +30,7 @@ export default defineConfig({
       {
         plugins: [
           storybookTest({
-            configDir: path.join(__dirname, '.storybook'),
+            configDir: path.join(import.meta.dirname, '.storybook'),
           }),
         ],
         test: {

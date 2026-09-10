@@ -31,16 +31,11 @@ function useTheme() {
   return theme;
 }
 
-export function useThemeMode(
-  props: {
-    localStorageKey?: string;
-  } = {},
-) {
+export function useThemeMode(props: { localStorageKey?: string } = {}) {
   const { localStorageKey } = props;
 
   const [themeMode, setThemeMode] = useState<ThemeMode>(() => {
-    const preferredThemeMode =
-      localStorageKey?.length && (localStorage.getItem(localStorageKey) as ThemeMode | null);
+    const preferredThemeMode = localStorageKey?.length && (localStorage.getItem(localStorageKey) as ThemeMode | null);
 
     return preferredThemeMode ? preferredThemeMode : 'system';
   });
